@@ -1,10 +1,10 @@
 package com.example.rumahrahil.onboarding
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.example.rumahrahil.MainActivity
+import com.example.rumahrahil.Login.LoginActivity
 import com.example.rumahrahil.R
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
@@ -32,7 +32,7 @@ class OnboardingActivity : AppCompatActivity() {
 
         btn_next_onboarding.setOnClickListener {
             if (getItem(+1) > mViewPager.childCount-1) {
-                startActivity(Intent(this@OnboardingActivity, MainActivity::class.java))
+                startActivity(Intent(this@OnboardingActivity, LoginActivity::class.java))
                 finish()
             } else {
                 mViewPager.setCurrentItem(getItem(+1), true)
