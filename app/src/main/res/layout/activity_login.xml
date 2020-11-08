@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:src="@drawable/ilustrasi_login"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/illustration_login" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_wb"
