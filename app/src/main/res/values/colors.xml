@@ -10,6 +10,11 @@
     <color name="dark_blue">#405467</color>
     <color name="main_green">#9CCFB3</color>
 
+    <!--custom-->
+    <color name="button_blue_login">#0052D0</color>
+    <color name="button_red">#F14336</color>
+    <color name="button_blue_fb">#385C8E</color>
+
     <!--reds-->
     <color name="md_red_50">#FFEBEE</color>
     <color name="md_red_100">#FFCDD2</color>
