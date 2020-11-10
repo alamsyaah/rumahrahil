@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/bottom_home"
+        android:title="@string/title_home"
+        app:exb_color="#FF8888"/>
+
+    <item
+        android:id="@+id/navigation_tes"
+        android:icon="@drawable/bottom_test"
+        android:title="@string/title_tes"
+        app:exb_color="@color/md_orange_500"
+        />
+
+    <item
+        android:id="@+id/navigation_kelas"
+        android:icon="@drawable/bottom_kelas"
+        android:title="@string/title_kelas"
+        app:exb_color="@color/md_teal_200"/>
+
+    <item
+        android:id="@+id/navigation_video"
+        android:icon="@drawable/bottom_video"
+        android:title="@string/title_video"
+        app:exb_color="#2270DE"/>
+
+
+</menu>
