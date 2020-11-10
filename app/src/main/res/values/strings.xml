@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Rumah Rahil</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_kelas">Kelas</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_video">Video</string>
+    <string name="title_tes">Tes</string>
 
     <string name="title_onboarding_1">Selamat Datang di Rumah Rahil Education !</string>
     <string name="description_onboarding_1">Tempat dimana anda dapat mendapatkan bimbingan dalam pelajaran yang anda butuhkan</string>
