@@ -17,6 +17,7 @@
     <string name="description_onboarding_3">Dapatkan guru secara eksklusif untuk membantu anda dalam meningkatkan perkembangan dalam belajar</string>
     <string name="rumah_rahil_education">Rumah Rahil Education</string>
     <string name="next">next</string>
+
     <string name="welcome_back">Selamat datang!</string>
     <string name="description_welcome">Silahkan isi data berikut untuk masuk</string>
     <string name="email">Email</string>
@@ -36,4 +37,23 @@
     <string name="register">Buat</string>
     <string name="back_to_login">Back to login</string>
     <string name="illustration_login">Ilustrasi Login</string>
+
+    <string name="halo">Halo,</string>
+    <string name="username">Alif Alamsyah</string>
+    <string name="profil">Profil</string>
+    <string name="search">Search</string>
+    <string name="tes_online">Tes Online</string>
+    <string name="sekarang_yuk">Sekarang Yuk !</string>
+    <string name="mulai">Mulai</string>
+    <string name="banner_kid">Banner Kid</string>
+    <string name="kelas_terakhir">Kelas yang terakhir dilihat</string>
+    <string name="matematika_dasar">Matematika Dasar</string>
+    <string name="waktu_45_menit">45 Menit</string>
+    <string name="play">Play</string>
+    <string name="book_icon">Book Icon</string>
+    <string name="ikut_bimbingan_belajar">Ikut bimbingan belajar</string>
+    <string name="video_banner">Video Banner</string>
+    <string name="rumah_rahil">Rumah Rahil</string>
+    <string name="deskripsi_rahil">Rumah Rahil adalah salah satu tempat yang menyediakan fasilitas bimbingan belajar untuk anak sekolah.</string>
+    <string name="daftar">Daftar</string>
 </resources>
