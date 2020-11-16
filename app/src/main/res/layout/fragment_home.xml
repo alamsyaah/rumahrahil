@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
     <LinearLayout
@@ -98,7 +99,8 @@
                 android:layout_marginTop="20dp"
                 android:text="@string/tes_online"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvJumbo2"
@@ -110,11 +112,11 @@
                 android:layout_marginBottom="80dp"
                 android:text="@string/sekarang_yuk"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonMulai"
-                style="@style/HomeOrangeButton"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvJumbo2"
@@ -123,7 +125,10 @@
                 android:hint="@string/mulai"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white" />
+                android:textColorHint="@color/white"
+                app:cornerRadius="8dp"
+                android:backgroundTint="@color/md_orange_500"
+                />
 
             <ImageView
                 android:id="@+id/ImgJumbotron"
@@ -157,6 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/home_class_box"
+                android:backgroundTint="#F5FAF5"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -255,6 +261,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/home_class_box"
+                android:backgroundTint="#F2F8FC"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -337,8 +344,7 @@
                 android:text="@string/deskripsi_rahil"
                 android:textColor="@color/black" />
 
-            <Button
-                style="@style/HomeOrangeButton"
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -347,7 +353,10 @@
                 android:layout_marginBottom="16dp"
                 android:text="@string/daftar"
                 android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:backgroundTint="@color/md_orange_500"
+                app:cornerRadius="8dp"
+                />
 
         </LinearLayout>
 

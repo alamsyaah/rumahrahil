@@ -15,8 +15,4 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="HomeOrangeButton">
-        <item name="backgroundTint">@color/md_orange_500</item>
-        <item name="cornerRadius">8dp</item>
-    </style>
 </resources>
