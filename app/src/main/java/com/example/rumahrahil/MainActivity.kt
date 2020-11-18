@@ -1,7 +1,7 @@
 package com.example.rumahrahil
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import github.com.st235.lib_expandablebottombar.navigation.ExpandableBottomBarNavigationUI
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,4 +14,5 @@ class MainActivity : AppCompatActivity() {
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         ExpandableBottomBarNavigationUI.setupWithNavController(expandable_bottom_bar, navController)
     }
+
 }

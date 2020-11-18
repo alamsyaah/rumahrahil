@@ -1,5 +1,6 @@
 package com.example.rumahrahil.Tes
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,7 +21,6 @@ private const val ARG_PARAM2 = "param2"
  */
 class TesFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    lateinit var tesKategoriFragment: TesKategoriFragment
     private var param1: String? = null
     private var param2: String? = null
 
@@ -56,26 +56,41 @@ class TesFragment : Fragment() {
     }
 
     private fun pilihKategori(jenjang: String) {
-        val bundle: Bundle = Bundle()
+        val intent = Intent(activity, TesKategoriActivity::class.java)
+//        val bundle: Bundle = Bundle()
         val choosenJenjang = jenjang
         when (choosenJenjang) {
             SD ->
-                bundle.putString(JENJANG, SD)
+//                bundle.putString(JENJANG, SD)
+                intent.putExtra(JENJANG, SD)
             SMP ->
-                bundle.putString(JENJANG, SMP)
+//                bundle.putString(JENJANG, SMP)
+                intent.putExtra(JENJANG, SMP)
             SMA ->
-                bundle.putString(JENJANG, SMA)
+//                bundle.putString(JENJANG, SMA)
+                intent.putExtra(JENJANG, SMA)
             DINAS ->
-                bundle.putString(JENJANG, DINAS)
+//                bundle.putString(JENJANG, DINAS)
+                intent.putExtra(JENJANG, DINAS)
         }
+        startActivity(intent)
+//        val transaction2 = requireActivity().supportFragmentManager.beginTransaction()
+//        val frag2 = TesKategoriFragment()
+//        val fragmentOld: Fragment? = requireActivity().supportFragmentManager.findFragmentByTag(TAG_TESFRAGMENT)
+//        frag2.arguments = bundle
 
-        val transaction2 = activity!!.supportFragmentManager.beginTransaction()
-        val frag2 = TesKategoriFragment()
-        frag2.arguments = bundle
+//        if (fragmentOld != null) {
+//            frag2 = fragmentOld as TesKategoriFragment
+//                    transaction2.hide(fragmentOld)
+//
+//        }
 
-        transaction2.replace(R.id.fragment_container, frag2)
-        transaction2.addToBackStack(null)
-        transaction2.commit()
+//        transaction2.add(R.id.nav_host_fragment, frag2)
+//        transaction2.addToBackStack(null)
+//        requireActivity().supportFragmentManager.popBackStackImmediate()
+//        transaction2.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+//        transaction2.commit()
+
     }
 
     companion object {
@@ -102,5 +117,6 @@ class TesFragment : Fragment() {
         const val SMA = "SMA"
         const val DINAS = "DINAS"
         const val JENJANG = "JENJANG"
+        const val TAG_TESFRAGMENT = "Tes Fragment"
     }
 }

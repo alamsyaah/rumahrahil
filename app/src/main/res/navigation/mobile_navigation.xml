@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_tes"
-        android:name="com.example.rumahrahil.fragments.TesFragment"
+        android:name="com.example.rumahrahil.Tes.TesFragment"
         android:label="@string/title_tes"
         tools:layout="@layout/fragment_tes" />
 
