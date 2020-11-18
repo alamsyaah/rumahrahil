@@ -1,10 +1,8 @@
 package com.example.rumahrahil.Tes
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import com.example.rumahrahil.MainActivity
 import com.example.rumahrahil.R
 import com.example.rumahrahil.Tes.TesFragment.Companion.JENJANG
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -24,7 +22,7 @@ class TesKategoriActivity : AppCompatActivity() {
         val choosenJenjang = intent.getStringExtra(JENJANG).toString()
 
         btn_backtohome_tes.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            super.onBackPressed()
         }
 
         btn_mulai_tes.setOnClickListener {

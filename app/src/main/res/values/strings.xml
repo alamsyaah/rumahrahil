@@ -56,4 +56,21 @@
     <string name="rumah_rahil">Rumah Rahil</string>
     <string name="deskripsi_rahil">Rumah Rahil adalah salah satu tempat yang menyediakan fasilitas bimbingan belajar untuk anak sekolah.</string>
     <string name="daftar">Daftar</string>
+    <string name="ilustrasi_tes">Ilustrasi Kategori Tes</string>
+    <string name="back_to_home_test">Image Back Home Test</string>
+    <string name="pilih_kategori">Pilih Kategori</string>
+    <string name="kelas">Kelas</string>
+    <string name="tema">Tema</string>
+    <string name="bab">Bab</string>
+    <string name="pilih_jenjang">Pilih Jenjang</string>
+    <string name="desc_tesonline">Tes Online merupakan salah satu fitur dimana siswa dapat mengukur sejauh mana kompetensi pribadi dari kumpulan soal yang telah disediakan.</string>
+    <string name="mulai_ujian">Mulai Ujian?</string>
+    <string name="message_dialog_teskategori">Kamu tidak akan bisa keluar sebelum menyelesaikan tes yang diberikan.</string>
+    <string name="positive_dialog">Ya</string>
+    <string name="negative_dialog">Tidak</string>
+    <string name="sd">SD</string>
+    <string name="ilustrasi_tes_sd">Ilustrasi Tes SD</string>
+    <string name="smp">SMP</string>
+    <string name="sma">SMA</string>
+    <string name="dinas">DINAS</string>
 </resources>
