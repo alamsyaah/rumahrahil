@@ -1,4 +1,4 @@
-package com.example.rumahrahil.Tes
+package com.example.rumahrahil.tes
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

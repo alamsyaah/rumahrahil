@@ -73,4 +73,17 @@
     <string name="smp">SMP</string>
     <string name="sma">SMA</string>
     <string name="dinas">DINAS</string>
+
+    <string name="setting">Setting</string>
+    <string name="profile_email">alamsyaah1198@gmail.com</string>
+    <string name="profile_name">Alif Alamsyah Yudhanto</string>
+    <string name="profile_username">alamsyaah</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="general">General</string>
+    <string name="username_profile">Username</string>
+    <string name="fullname_profile">Full Name</string>
+    <string name="password_profile">Password</string>
+    <string name="save_change">Save Change</string>
+
+
 </resources>

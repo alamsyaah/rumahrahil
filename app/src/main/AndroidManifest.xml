@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RumahRahil.Light">
-        <activity android:name=".Tes.TesKategoriActivity"></activity>
-        <activity android:name=".Tes.TesActivity"></activity>
-        <activity android:name=".Login.RegisterActivity" />
+        <activity android:name=".profile.EditProfileActivity"></activity>
+        <activity android:name=".profile.ProfileActivity" />
+        <activity android:name=".tes.TesKategoriActivity" />
+        <activity android:name=".tes.TesActivity" />
+        <activity android:name=".login.RegisterActivity" />
         <activity android:name=".onboarding.OnboardingActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".login.LoginActivity" />
         <activity android:name=".onboarding.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

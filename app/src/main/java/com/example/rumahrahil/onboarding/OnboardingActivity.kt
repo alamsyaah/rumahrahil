@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.example.rumahrahil.Login.LoginActivity
+import com.example.rumahrahil.login.LoginActivity
 import com.example.rumahrahil.R
 import kotlinx.android.synthetic.main.activity_onboarding.*
 

@@ -1,10 +1,10 @@
-package com.example.rumahrahil.Tes
+package com.example.rumahrahil.tes
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rumahrahil.R
-import com.example.rumahrahil.Tes.TesFragment.Companion.JENJANG
+import com.example.rumahrahil.tes.TesFragment.Companion.JENJANG
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_tes_kategori.*
