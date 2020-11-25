@@ -39,6 +39,7 @@
             </LinearLayout>
 
             <ImageButton
+                android:id="@+id/btn_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/home_profile"

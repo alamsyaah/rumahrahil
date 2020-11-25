@@ -1,11 +1,15 @@
 package com.example.rumahrahil.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.rumahrahil.R
+import com.example.rumahrahil.profile.EditProfileActivity
+import com.example.rumahrahil.profile.ProfileActivity
+import kotlinx.android.synthetic.main.fragment_home.*
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -29,6 +33,13 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        btn_profile.setOnClickListener {
+            startActivity(Intent(context, ProfileActivity::class.java))
+        }
     }
 
     companion object {
