@@ -14,5 +14,9 @@ class ProfileActivity : AppCompatActivity() {
         btn_edit_profile.setOnClickListener {
             startActivity(Intent(this, EditProfileActivity::class.java))
         }
+
+        back_profile.setOnClickListener{
+            onBackPressed()
+        }
     }
 }
