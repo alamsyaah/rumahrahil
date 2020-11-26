@@ -84,6 +84,9 @@
     <string name="fullname_profile">Full Name</string>
     <string name="password_profile">Password</string>
     <string name="save_change">Save Change</string>
+    <string name="video_pembelajaran">Video Pembelajaran</string>
+    <string name="image_thumbnail_video_pembelajaran">Image Thumbnail Video Pembelajaran</string>
+    <string name="image_play_button">Image Play Button</string>
 
 
 </resources>
