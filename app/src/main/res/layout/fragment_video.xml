@@ -74,15 +74,15 @@
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_cat_sd"
-            style="@style/customChipStyle"
-            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:text="@string/sd"
             android:textStyle="bold" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_cat_smp"
-            style="@style/customChipStyle"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/smp"
@@ -90,7 +90,7 @@
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_cat_sma"
-            style="@style/customChipStyle"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sma"
@@ -98,7 +98,7 @@
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_cat_dinas"
-            style="@style/customChipStyle"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dinas"
