@@ -30,6 +30,25 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/image_play_button" />
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/md_grey_900"
+                android:alpha="0.5" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_title_carditem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/example_title_cardvideo"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
         </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>

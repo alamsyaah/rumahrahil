@@ -26,6 +26,7 @@ class ListVideoAdapter() :
                         .load(video.linkThumbnail)
                         .override(300, 150)
                         .into(iv_thumbnail_video)
+                tv_title_carditem.text = video.nama
             }
         }
     }
