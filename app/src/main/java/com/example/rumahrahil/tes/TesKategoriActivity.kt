@@ -1,5 +1,6 @@
 package com.example.rumahrahil.tes
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
@@ -31,6 +32,7 @@ class TesKategoriActivity : AppCompatActivity() {
                     .setMessage(getString(R.string.message_dialog_teskategori))
                     .setPositiveButton(getString(R.string.positive_dialog)) { dialog, which ->
                         Snackbar.make(it, "Tes dimulai", Snackbar.LENGTH_SHORT).show()
+                        startActivity(Intent(this, DoTestActivity::class.java))
                     }
                     .setNegativeButton(getString(R.string.negative_dialog)) { dialog, which ->
                         dialog.dismiss()

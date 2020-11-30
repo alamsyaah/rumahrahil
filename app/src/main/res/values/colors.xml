@@ -15,6 +15,7 @@
     <color name="button_red">#F14336</color>
     <color name="button_blue_fb">#385C8E</color>
     <color name="button_orange">#FF7F2D</color>
+    <color name="cv_tes_grey">#F5F6FC</color>
 
     <!--reds-->
     <color name="md_red_50">#FFEBEE</color>

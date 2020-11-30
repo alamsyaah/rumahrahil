@@ -87,6 +87,13 @@
     <string name="video_pembelajaran">Video Pembelajaran</string>
     <string name="image_thumbnail_video_pembelajaran">Image Thumbnail Video Pembelajaran</string>
     <string name="image_play_button">Image Play Button</string>
+    <string name="question_number">1 dari 40</string>
+    <string name="countdown_timer">1:30</string>
+    <string name="example_lesson_title">Matematika Dasar</string>
+    <string name="example_question">Diketahui Andi memiliki 5 buah apel, kemudian ibunya memberikan 10 buah apel lagi kepada Andi, ada berapakah apel Andi sekarang?</string>
+    <string name="example_answer1">10</string>
+    <string name="previous_question">sebelumnya</string>
+    <string name="next_question">selanjutnya</string>
 
 
 </resources>

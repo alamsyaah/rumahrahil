@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RumahRahil.Light">
+        <activity android:name=".tes.DoTestActivity"></activity>
         <activity android:name=".profile.EditProfileActivity" />
         <activity android:name=".profile.ProfileActivity" />
         <activity android:name=".tes.TesKategoriActivity" />
