@@ -53,6 +53,9 @@ class TesFragment : Fragment() {
         cv_kedinasan_tes.setOnClickListener {
             pilihKategori(DINAS)
         }
+        cv_sbmptn_tes.setOnClickListener {
+            pilihKategori(SBMPTN)
+        }
     }
 
     private fun pilihKategori(jenjang: String) {
@@ -72,6 +75,8 @@ class TesFragment : Fragment() {
             DINAS ->
 //                bundle.putString(JENJANG, DINAS)
                 intent.putExtra(JENJANG, DINAS)
+            SBMPTN ->
+                intent.putExtra(JENJANG, SBMPTN)
         }
         startActivity(intent)
 //        val transaction2 = requireActivity().supportFragmentManager.beginTransaction()
@@ -116,6 +121,7 @@ class TesFragment : Fragment() {
         const val SMP = "SMP"
         const val SMA = "SMA"
         const val DINAS = "DINAS"
+        const val SBMPTN = "SBMPTN"
         const val JENJANG = "JENJANG"
         const val TAG_TESFRAGMENT = "Tes Fragment"
     }

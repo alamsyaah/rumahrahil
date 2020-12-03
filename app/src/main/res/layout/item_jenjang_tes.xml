@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingHorizontal="32dp"
-    android:layout_marginTop="16dp">
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_sd_tes"
@@ -128,6 +129,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dinas"
+                android:textSize="24sp"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_sbmptn_tes"
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/cv_kedinasan_tes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="#CBE2FF"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/ilustrasi_tes_smp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/ilustrasi_tes_sd" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sbmptn"
                 android:textSize="24sp"
                 android:layout_gravity="center"
                 android:textStyle="bold" />

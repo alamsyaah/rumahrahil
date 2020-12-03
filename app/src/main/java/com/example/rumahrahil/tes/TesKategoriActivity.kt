@@ -15,6 +15,7 @@ class TesKategoriActivity : AppCompatActivity() {
     lateinit var adapterKelas: ArrayAdapter<String>
     lateinit var adapterTema: ArrayAdapter<String>
     lateinit var adapterBab: ArrayAdapter<String>
+    lateinit var adapterPaket: ArrayAdapter<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,22 +45,26 @@ class TesKategoriActivity : AppCompatActivity() {
         dd_kelas_tes.setAdapter(adapterKelas)
         dd_tema_tes.setAdapter(adapterTema)
         dd_bab_tes.setAdapter(adapterBab)
+        dd_paket_tes.setAdapter(adapterPaket)
     }
 
     private fun placingDropdown(choosenJenjang: String) {
-        val kelasSD = listOf("1(Satu)", "2(Dua)", "3(Tiga)", "4(Empat)", "5(Lima)", "6(Enam)")
+        val kelasSD = listOf("1(Satu)", "2(Dua)", "3(Tiga)", "4(Empat)", "5(Lima)", "6(Enam)", "Ujian Sekolah")
         val kelasSMP = listOf("7(Tujuh)", "8(Delapan)", "9(Sembilan)")
         val kelasSMA = listOf("10(Sepuluh)", "11(Sebelas)", "12(Dua Belas)")
         val kelasDinas = listOf("Statistika", "Akuntansi")
+        val kelasSbmptn = listOf("Saintek", "Soshum")
         val temaSD = listOf("Matematika", "Bahasa Indonesia", "Bahasa Inggris")
         val temaSMP = listOf("Biologi", "Fisika", "Bahasa Inggris")
         val temaSMA = listOf("Kimia", "Astronomi")
         val temaDinas = listOf("Tema1", "Tema2")
+        val temaSbmptn = listOf("Tema1", "Tema2")
         val babSD = listOf("1(Satu)", "2(Dua)")
         val babSMP = listOf("3(Tiga)", "4(Empat)")
         val babSMA = listOf("5(Lima)", "6(Enam)")
         val babDinas = listOf("bab1", "bab2")
-
+        val babSbmptn = listOf("bab1", "bab2")
+        val paket = listOf("A", "B")
         when (choosenJenjang) {
             "SD" ->
                 adapterKelas = ArrayAdapter(this, R.layout.item_kategori_dropdown, kelasSD)
@@ -69,6 +74,8 @@ class TesKategoriActivity : AppCompatActivity() {
                 adapterKelas = ArrayAdapter(this, R.layout.item_kategori_dropdown, kelasSMA)
             "DINAS" ->
                 adapterKelas = ArrayAdapter(this, R.layout.item_kategori_dropdown, kelasDinas)
+            "SBMPTN" ->
+                adapterKelas = ArrayAdapter(this, R.layout.item_kategori_dropdown, kelasSbmptn)
         }
         when (choosenJenjang) {
             "SD" ->
@@ -79,6 +86,8 @@ class TesKategoriActivity : AppCompatActivity() {
                 adapterTema = ArrayAdapter(this, R.layout.item_kategori_dropdown, temaSMA)
             "DINAS" ->
                 adapterTema = ArrayAdapter(this, R.layout.item_kategori_dropdown, temaDinas)
+            "SBMPTN" ->
+                adapterTema = ArrayAdapter(this, R.layout.item_kategori_dropdown, temaSbmptn)
         }
         when (choosenJenjang) {
             "SD" ->
@@ -89,6 +98,9 @@ class TesKategoriActivity : AppCompatActivity() {
                 adapterBab = ArrayAdapter(this, R.layout.item_kategori_dropdown, babSMA)
             "DINAS" ->
                 adapterBab = ArrayAdapter(this, R.layout.item_kategori_dropdown, babDinas)
+            "SBMPTN" ->
+                adapterBab = ArrayAdapter(this, R.layout.item_kategori_dropdown, babSbmptn)
         }
+        adapterPaket = ArrayAdapter(this, R.layout.item_kategori_dropdown, paket)
     }
 }

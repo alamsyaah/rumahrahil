@@ -12,7 +12,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="280dp"
+            android:layout_height="230dp"
             android:src="@drawable/ilustrasi_tes"
             android:contentDescription="@string/ilustrasi_tes" />
 
@@ -79,6 +79,22 @@
 
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
             android:id="@+id/dd_bab_tes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/paket">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/dd_paket_tes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none" />

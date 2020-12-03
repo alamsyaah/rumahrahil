@@ -61,7 +61,7 @@
     <string name="pilih_kategori">Pilih Kategori</string>
     <string name="kelas">Kelas</string>
     <string name="tema">Tema</string>
-    <string name="bab">Bab</string>
+    <string name="bab">Subtema</string>
     <string name="pilih_jenjang">Pilih Jenjang</string>
     <string name="desc_tesonline">Tes Online merupakan salah satu fitur dimana siswa dapat mengukur sejauh mana kompetensi pribadi dari kumpulan soal yang telah disediakan.</string>
     <string name="mulai_ujian">Mulai Ujian?</string>
@@ -95,6 +95,8 @@
     <string name="previous_question">sebelumnya</string>
     <string name="next_question">selanjutnya</string>
     <string name="example_title_cardvideo">Belajar Bahasa Inggris</string>
+    <string name="sbmptn">SBMPTN</string>
+    <string name="paket">Paket</string>
 
 
 </resources>
