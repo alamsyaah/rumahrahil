@@ -1,4 +1,4 @@
-package com.example.rumahrahil.onboarding
+package com.example.rumahrahil.ui.onboarding
 
 import android.content.Context
 import androidx.fragment.app.Fragment

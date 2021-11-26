@@ -1,4 +1,4 @@
-package com.example.rumahrahil.tes
+package com.example.rumahrahil.ui.tes
 
 import android.content.Intent
 import android.os.Bundle

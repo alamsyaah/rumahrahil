@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rumahrahil">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,15 +11,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RumahRahil.Light">
-        <activity android:name=".profile.EditProfileActivity"></activity>
-        <activity android:name=".profile.ProfileActivity" />
-        <activity android:name=".tes.TesKategoriActivity" />
-        <activity android:name=".tes.TesActivity" />
-        <activity android:name=".login.RegisterActivity" />
-        <activity android:name=".onboarding.OnboardingActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".login.LoginActivity" />
-        <activity android:name=".onboarding.SplashScreenActivity">
+        <activity
+            android:name=".ui.profile.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.tes.TesKategoriActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.tes.TesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.onboarding.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.onboarding.SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

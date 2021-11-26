@@ -1,9 +1,9 @@
-package com.example.rumahrahil.onboarding
+package com.example.rumahrahil.ui.onboarding
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import com.example.rumahrahil.R
 
 class SplashScreenActivity : AppCompatActivity() {

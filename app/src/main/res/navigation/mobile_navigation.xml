@@ -7,26 +7,32 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.rumahrahil.fragments.HomeFragment"
+        android:name="com.example.rumahrahil.ui.fragments.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_video"
-        android:name="com.example.rumahrahil.fragments.VideoFragment"
+        android:name="com.example.rumahrahil.ui.fragments.VideoFragment"
         android:label="@string/title_video"
         tools:layout="@layout/fragment_video" />
 
     <fragment
         android:id="@+id/navigation_tes"
-        android:name="com.example.rumahrahil.tes.TesFragment"
+        android:name="com.example.rumahrahil.ui.tes.TesFragment"
         android:label="@string/title_tes"
         tools:layout="@layout/fragment_tes" />
 
     <fragment
         android:id="@+id/navigation_kelas"
-        android:name="com.example.rumahrahil.fragments.KelasFragment"
+        android:name="com.example.rumahrahil.ui.fragments.KelasFragment"
         android:label="@string/title_kelas"
         tools:layout="@layout/fragment_kelas" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.rumahrahil.ui.profile.ProfileFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

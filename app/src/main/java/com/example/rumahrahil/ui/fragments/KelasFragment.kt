@@ -1,16 +1,16 @@
-package com.example.rumahrahil.fragments
+package com.example.rumahrahil.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.rumahrahil.R
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class VideoFragment : Fragment() {
+class KelasFragment : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -28,13 +28,13 @@ class VideoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_video, container, false)
+        return inflater.inflate(R.layout.fragment_kelas, container, false)
     }
 
     companion object {
 
         fun newInstance(param1: String, param2: String) =
-            VideoFragment().apply {
+            KelasFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

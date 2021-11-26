@@ -1,4 +1,4 @@
-package com.example.rumahrahil.login
+package com.example.rumahrahil.ui.login
 
 import android.content.Intent
 import android.os.Bundle

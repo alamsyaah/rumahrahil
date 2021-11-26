@@ -85,5 +85,9 @@
     <string name="password_profile">Password</string>
     <string name="save_change">Save Change</string>
 
+    <string name="no">Tidak</string>
+    <string name="yes">Ya</string>
+    <string name="confirm_logout">Apakah Anda Yakin Ingin Keluar?</string>
+
 
 </resources>

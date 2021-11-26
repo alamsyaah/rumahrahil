@@ -1,11 +1,11 @@
-package com.example.rumahrahil.onboarding
+package com.example.rumahrahil.ui.onboarding
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.example.rumahrahil.login.LoginActivity
 import com.example.rumahrahil.R
+import com.example.rumahrahil.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
 class OnboardingActivity : AppCompatActivity() {

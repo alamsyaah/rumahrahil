@@ -1,11 +1,11 @@
-package com.example.rumahrahil.onboarding
+package com.example.rumahrahil.ui.onboarding
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
 import com.example.rumahrahil.R
 

@@ -19,13 +19,19 @@
         android:id="@+id/navigation_kelas"
         android:icon="@drawable/bottom_kelas"
         android:title="@string/title_kelas"
-        app:exb_color="@color/md_teal_200"/>
+        app:exb_color="@color/md_teal_200" />
 
     <item
         android:id="@+id/navigation_video"
         android:icon="@drawable/bottom_video"
         android:title="@string/title_video"
-        app:exb_color="#2270DE"/>
+        app:exb_color="#2270DE" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/bottom_profile"
+        android:title="Profil"
+        app:exb_color="#FFC107" />
 
 
 </menu>
