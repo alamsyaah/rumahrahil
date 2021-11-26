@@ -1,7 +1,7 @@
-package com.example.rumahrahil.profile
+package com.example.rumahrahil.ui.profile
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.rumahrahil.R
 
 class ProfileActivity : AppCompatActivity() {

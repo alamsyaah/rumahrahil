@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".login.LoginActivity">
+    tools:context=".ui.login.LoginActivity">
 
     <ImageView
         android:id="@+id/iv_ilustrasi_login"
@@ -13,6 +13,7 @@
         android:layout_height="150dp"
         android:src="@drawable/ilustrasi_login"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="28dp"
         android:contentDescription="@string/illustration_login" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -36,22 +37,23 @@
         app:layout_constraintTop_toBottomOf="@id/tv_wb"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_email_login"
+        android:id="@+id/tv_username_login"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:layout_marginHorizontal="32dp"
         app:helperTextTextColor="@color/md_blue_500"
         app:boxStrokeColor="@color/md_blue_500"
         app:layout_constraintTop_toBottomOf="@id/tv_descwb">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textColor="@color/black"
             android:inputType="textEmailAddress"
-            android:hint="@string/email" />
+            android:hint="Username" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,9 +66,10 @@
         android:layout_marginHorizontal="32dp"
         app:boxStrokeColor="@color/md_blue_500"
         app:passwordToggleEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/til_email_login">
+        app:layout_constraintTop_toBottomOf="@id/tv_username_login">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textColor="@color/black"
@@ -75,22 +78,11 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_forgotpw_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/til_password_login"
-        app:layout_constraintEnd_toEndOf="@id/til_password_login" />
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_submit_login"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="@color/button_blue_login"
         app:layout_constraintTop_toBottomOf="@id/til_password_login"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,72 +90,84 @@
         app:cornerRadius="25dp"
         android:text="@string/log_in" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_connect_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/or_connect_using"
-        android:gravity="center"
-        android:layout_marginTop="24dp"
-        android:textColor="@color/md_grey_500"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_submit_login" />
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/tv_forgotpw_login"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/forgot_password"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/til_password_login"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/til_password_login" />-->
 
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:id="@+id/btn_facebook_login"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="@string/facebook"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:icon="@drawable/ic_facebook"
-        app:iconSize="15dp"
-        android:backgroundTint="@color/button_blue_fb"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn_google_login"
-        app:layout_constraintTop_toBottomOf="@id/tv_connect_login" />
 
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:id="@+id/btn_google_login"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:text="@string/google"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        app:icon="@drawable/ic_google_plus"
-        app:iconSize="15dp"
-        android:backgroundTint="@color/button_red"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_facebook_login"
-        app:layout_constraintTop_toBottomOf="@id/tv_connect_login" />
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/tv_connect_login"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/or_connect_using"-->
+    <!--        android:gravity="center"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:textColor="@color/md_grey_500"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_submit_login" />-->
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_donthaveacc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dont_have_account"
-        android:textColor="@color/black"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/tv_gotosignup_login" />
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        style="@style/Widget.MaterialComponents.Button.Icon"-->
+    <!--        android:id="@+id/btn_facebook_login"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:text="@string/facebook"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        app:icon="@drawable/ic_facebook"-->
+    <!--        app:iconSize="15dp"-->
+    <!--        android:backgroundTint="@color/button_blue_fb"-->
+    <!--        app:layout_constraintHorizontal_chainStyle="packed"-->
+    <!--        app:layout_constraintVertical_chainStyle="packed"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/btn_google_login"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/tv_connect_login" />-->
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_gotosignup_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:textColor="@color/md_blue_500"
-        android:textStyle="bold"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_donthaveacc"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        style="@style/Widget.MaterialComponents.Button.Icon"-->
+    <!--        android:id="@+id/btn_google_login"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:text="@string/google"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        app:icon="@drawable/ic_google_plus"-->
+    <!--        app:iconSize="15dp"-->
+    <!--        android:backgroundTint="@color/button_red"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/btn_facebook_login"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/tv_connect_login" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/tv_donthaveacc"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/dont_have_account"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        app:layout_constraintHorizontal_chainStyle="packed"-->
+    <!--        app:layout_constraintVertical_chainStyle="packed"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/tv_gotosignup_login" />-->
+
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/tv_gotosignup_login"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/sign_up"-->
+    <!--        android:textColor="@color/md_blue_500"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/tv_donthaveacc"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
