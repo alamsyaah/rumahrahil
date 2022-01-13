@@ -1,50 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.tes.TesFragment">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/img_test"
             android:layout_width="match_parent"
             android:layout_height="280dp"
+            android:contentDescription="@string/ilustrasi_tes"
             android:src="@drawable/ilustrasi_tes"
-            android:contentDescription="@string/ilustrasi_tes" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_header_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="@string/tes_online"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_gravity="center" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_test" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginHorizontal="16dp"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="16dp"
             android:text="@string/desc_tesonline"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_desc" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_choose_grade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pilih_jenjang"
-            android:textStyle="bold"
             android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="16dp"
+            android:paddingHorizontal="16dp"
+            android:text="@string/pilih_jenjang"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
 
-        <include layout="@layout/item_jenjang_tes" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_sd_tes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="36dp"
+            android:layout_marginVertical="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#CBE2FF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_choose_grade"
+            app:rippleColor="#DBDBDB">
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/ilustrasi_tes_sd"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ilustrasi_tes_sd" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/sd"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_smp_tes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="36dp"
+            android:layout_marginVertical="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#CBE2FF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_choose_grade"
+            app:rippleColor="#DBDBDB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/ilustrasi_tes_sd"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ilustrasi_tes_smp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/smp"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_sma_tes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="36dp"
+            android:layout_marginVertical="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#CBE2FF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_choose_grade"
+            app:rippleColor="#DBDBDB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/ilustrasi_tes_sd"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ilustrasi_tes_sma" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/sma"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_kedinasan_tes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="36dp"
+            android:layout_marginVertical="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#CBE2FF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_choose_grade"
+            app:rippleColor="#DBDBDB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/ilustrasi_tes_sd"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ilustrasi_tes_sma" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="KEDINASAN"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!--        <include layout="@layout/item_jenjang_tes" />-->
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="16dp"-->
+        <!--            android:paddingHorizontal="32dp">-->
+
+        <!--            <com.google.android.material.card.MaterialCardView-->
+        <!--                android:id="@+id/cv_sd_tes"-->
+        <!--                android:layout_width="140dp"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                app:cardBackgroundColor="#CBE2FF"-->
+        <!--                app:cardCornerRadius="12dp">-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                    <ImageView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="150dp"-->
+        <!--                        android:contentDescription="@string/ilustrasi_tes_sd"-->
+        <!--                        android:scaleType="centerCrop"-->
+        <!--                        android:src="@drawable/ilustrasi_tes_sd" />-->
+
+        <!--                    <com.google.android.material.textview.MaterialTextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_gravity="center"-->
+        <!--                        android:text="@string/sd"-->
+        <!--                        android:textSize="24sp"-->
+        <!--                        android:textStyle="bold" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--            </com.google.android.material.card.MaterialCardView>-->
+
+        <!--            <com.google.android.material.card.MaterialCardView-->
+        <!--                android:id="@+id/cv_smp_tes"-->
+        <!--                android:layout_width="140dp"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                android:layout_alignParentEnd="true"-->
+        <!--                app:cardBackgroundColor="#CBE2FF"-->
+        <!--                app:cardCornerRadius="12dp">-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                    <ImageView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="150dp"-->
+        <!--                        android:contentDescription="@string/ilustrasi_tes_sd"-->
+        <!--                        android:scaleType="centerCrop"-->
+        <!--                        android:src="@drawable/ilustrasi_tes_smp" />-->
+
+        <!--                    <com.google.android.material.textview.MaterialTextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_gravity="center"-->
+        <!--                        android:text="@string/smp"-->
+        <!--                        android:textSize="24sp"-->
+        <!--                        android:textStyle="bold" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--            </com.google.android.material.card.MaterialCardView>-->
+
+        <!--            <com.google.android.material.card.MaterialCardView-->
+        <!--                android:id="@+id/cv_sma_tes"-->
+        <!--                android:layout_width="140dp"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                android:layout_below="@id/cv_sd_tes"-->
+        <!--                android:layout_marginTop="16dp"-->
+        <!--                app:cardBackgroundColor="#CBE2FF"-->
+        <!--                app:cardCornerRadius="12dp">-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                    <ImageView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="150dp"-->
+        <!--                        android:contentDescription="@string/ilustrasi_tes_sd"-->
+        <!--                        android:scaleType="centerCrop"-->
+        <!--                        android:src="@drawable/ilustrasi_tes_sma" />-->
+
+        <!--                    <com.google.android.material.textview.MaterialTextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_gravity="center"-->
+        <!--                        android:text="@string/sma"-->
+        <!--                        android:textSize="24sp"-->
+        <!--                        android:textStyle="bold" />-->
+
+        <!--                </LinearLayout>-->
+
+        <!--            </com.google.android.material.card.MaterialCardView>-->
+
+        <!--            <com.google.android.material.card.MaterialCardView-->
+        <!--                android:id="@+id/cv_kedinasan_tes"-->
+        <!--                android:layout_width="140dp"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                android:layout_below="@id/cv_smp_tes"-->
+        <!--                android:layout_alignParentEnd="true"-->
+        <!--                android:layout_marginTop="16dp"-->
+        <!--                app:cardBackgroundColor="#CBE2FF"-->
+        <!--                app:cardCornerRadius="12dp">-->
+
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical">-->
+
+        <!--                    <ImageView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="150dp"-->
+        <!--                        android:contentDescription="@string/ilustrasi_tes_sd"-->
+        <!--                        android:scaleType="centerCrop"-->
+        <!--                        android:src="@drawable/ilustrasi_tes_smp" />-->
+
+        <!--                    <com.google.android.material.textview.MaterialTextView-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_gravity="center"-->
+        <!--                        android:text="SMK"-->
+        <!--                        android:textSize="24sp"-->
+        <!--                        android:textStyle="bold" />-->
+
+        <!--                </LinearLayout>-->
+        <!--            </com.google.android.material.card.MaterialCardView>-->
+        <!--        </RelativeLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

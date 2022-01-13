@@ -127,7 +127,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dinas"
+                android:text="SMK"
                 android:textSize="24sp"
                 android:layout_gravity="center"
                 android:textStyle="bold" />

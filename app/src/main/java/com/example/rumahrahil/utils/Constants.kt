@@ -13,4 +13,13 @@ object Constants {
     const val SISWA_EMAIL = "email"
     const val SISWA_IMAGE = "image"
     const val TOKEN = "token"
+    const val MAPEL_ID = "id_mapel"
+    const val BAB_ID = "id_bab"
+    const val optionA = "optionA"
+    const val optionB = "optionB"
+    const val optionC = "optionC"
+    const val optionD = "optionD"
+    const val optionE = "optionE"
+    const val correctAnswer = "correctAnswer"
+    const val failureAnswer = "failureAnswer"
 }

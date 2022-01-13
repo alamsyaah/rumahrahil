@@ -5,17 +5,28 @@
       <map>
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/drawable-hdpi/bottom_home.xml" value="0.13148148148148148" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/drawable-hdpi/bottom_profile.xml" value="0.13148148148148148" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/drawable/bg_question.xml" value="0.15" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/drawable/bg_radio_button.xml" value="0.15" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/drawable/home_profile.xml" value="0.13148148148148148" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/drawable/shape_logout.xml" value="0.12314814814814815" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/activity_first_tes.xml" value="0.11322463768115942" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/activity_njajal.xml" value="0.10081053698074975" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/activity_onboarding.xml" value="0.10081053698074975" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/activity_tes.xml" value="0.18" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/activity_tes_kategori.xml" value="0.21" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/content_first_tes.xml" value="0.11322463768115942" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/fragment_first.xml" value="0.11322463768115942" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/fragment_home.xml" value="0.15" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/fragment_kelas.xml" value="0.10081053698074975" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/fragment_profile.xml" value="0.16" />
-        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/fragment_tes.xml" value="0.10081053698074975" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/fragment_question.xml" value="0.10081053698074975" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/fragment_tes.xml" value="0.1" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/fragment_video.xml" value="0.10081053698074975" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/item_jenjang_tes.xml" value="0.1" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/layout/item_kategori_dropdown.xml" value="0.1" />
         <entry key="..\:/Users/ramad/AndroidStudioProjects/rumahrahil/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1259259259259259" />
       </map>
     </option>

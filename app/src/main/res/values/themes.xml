@@ -15,4 +15,13 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.RumahRahil.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.RumahRahil.Light.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.RumahRahil.Light.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

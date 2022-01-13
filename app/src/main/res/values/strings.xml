@@ -60,8 +60,9 @@
     <string name="back_to_home_test">Image Back Home Test</string>
     <string name="pilih_kategori">Pilih Kategori</string>
     <string name="kelas">Kelas</string>
-    <string name="tema">Tema</string>
+    <string name="mapel">Mapel</string>
     <string name="bab">Bab</string>
+    <string name="paket">Paket</string>
     <string name="pilih_jenjang">Pilih Jenjang</string>
     <string name="desc_tesonline">Tes Online merupakan salah satu fitur dimana siswa dapat mengukur sejauh mana kompetensi pribadi dari kumpulan soal yang telah disediakan.</string>
     <string name="mulai_ujian">Mulai Ujian?</string>
@@ -84,10 +85,25 @@
     <string name="fullname_profile">Full Name</string>
     <string name="password_profile">Password</string>
     <string name="save_change">Save Change</string>
-
     <string name="no">Tidak</string>
     <string name="yes">Ya</string>
     <string name="confirm_logout">Apakah Anda Yakin Ingin Keluar?</string>
+    <string name="first_number">1</string>
+    <string name="from">dari</string>
+    <string name="last_number">50</string>
+    <string name="countdown">01:59</string>
+    <string name="next_question">Selanjutnya</string>
+    <string name="previous_question">Sebelumnya</string>
+    <string name="question">Siapakah pencipta bahasa pemrograman pertama kali?</string>
+    <string name="option_answer_text">Dennis Ritchie</string>
+    <string name="title_activity_first_tes">FirstTesActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 
 </resources>

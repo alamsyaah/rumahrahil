@@ -72,4 +72,8 @@ dependencies {
     //Material Dialog
     implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.2'
 
+    //toasty
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+
+
 }
