@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:scrollbars="none"
+    tools:context=".ui.tes.FirstTesActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_number_question"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="12dp"-->
+        <!--            android:fontFamily="@font/montserrat"-->
+        <!--            android:text="@string/first_number"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textSize="24sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/layout_answer"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:fontFamily="@font/montserrat"-->
+        <!--            android:text="dari 20"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textSize="24sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/tv_number_question"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/tv_number_question"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/tv_number_question" />-->
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_first_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/first_number"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:text="@string/from"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_first_number"
+            app:layout_constraintStart_toEndOf="@id/tv_first_number"
+            app:layout_constraintTop_toTopOf="@id/tv_first_number" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_last_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_number"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_from"
+            app:layout_constraintStart_toEndOf="@id/tv_from"
+            app:layout_constraintTop_toTopOf="@id/tv_from" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/countdown"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_last_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_last_number" />
+
+        <RelativeLayout
+            android:id="@+id/layout_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_question"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_first_number">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxEms="10"
+                android:paddingHorizontal="16dp"
+                android:text="@string/question"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_group_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/layout_answer"
+            app:layout_constraintTop_toBottomOf="@+id/layout_answer">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rb_first_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_radio_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/option_answer_text" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rb_second_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_radio_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/option_answer_text" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rb_third_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_radio_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/option_answer_text" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rb_fourth_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_radio_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/option_answer_text" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rb_fifth_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_radio_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/option_answer_text" />
+        </RadioGroup>
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btn_next"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="24dp"-->
+        <!--            android:fontFamily="@font/montserrat"-->
+        <!--            android:clickable="true"-->
+        <!--            android:elevation="4dp"-->
+        <!--            android:focusable="true"-->
+        <!--            android:paddingVertical="16dp"-->
+        <!--            android:text="Lanjut"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:visibility="visible"-->
+        <!--            app:cornerRadius="15dp"-->
+        <!--            app:backgroundTint="#3490dc"-->
+        <!--            app:rippleColor="#DBDBDB"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/radio_group_answer" />-->
+
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btn_finish"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="24dp"-->
+        <!--            android:fontFamily="@font/montserrat"-->
+        <!--            android:clickable="true"-->
+        <!--            android:elevation="4dp"-->
+        <!--            android:focusable="true"-->
+        <!--            android:paddingVertical="16dp"-->
+        <!--            android:text="Selesai"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:visibility="invisible"-->
+        <!--            app:cornerRadius="15dp"-->
+        <!--            app:backgroundTint="#3490dc"-->
+        <!--            app:rippleColor="#DBDBDB"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/radio_group_answer" />-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:fontFamily="@font/montserrat"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="@string/next_question"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#3490dc"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radio_group_answer"
+            app:rippleColor="#DBDBDB" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:fontFamily="@font/montserrat"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="@string/previous_question"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:backgroundTint="#3490dc"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="#DBDBDB" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
