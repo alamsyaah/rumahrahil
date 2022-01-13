@@ -48,44 +48,44 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/home_searchbox"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="16dp"
-            android:paddingTop="12dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="12dp">
+        <!--       <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:background="@drawable /home_searchbox"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:paddingStart="16dp"-->
+        <!--            android:paddingTop="12dp"-->
+        <!--            android:paddingEnd="8dp"-->
+        <!--            android:paddingBottom="12dp">-->
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/search"
-                android:src="@drawable/home_search_icon" />
+        <!--            <ImageView-->
+        <!--                android:layout_width="20dp"-->
+        <!--                android:layout_height="20dp"-->
+        <!--                android:adjustViewBounds="true"-->
+        <!--                android:contentDescription="@string/search"-->
+        <!--                android:src="@drawable/home_search_icon" />-->
 
-            <EditText
-                android:id="@+id/edt_search_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:autofillHints="0"
-                android:background="@android:color/transparent"
-                android:hint="@string/search"
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:lines="1"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:textColor="@color/white"
-                android:textColorHint="@android:color/darker_gray"
-                android:textSize="14sp" />
+        <!--            <EditText-->
+        <!--                android:id="@+id/edt_search_text"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="8dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:autofillHints="0"-->
+        <!--                android:background="@android:color/transparent"-->
+        <!--                android:hint="@string/search"-->
+        <!--                android:imeOptions="actionSearch"-->
+        <!--                android:inputType="text"-->
+        <!--                android:lines="1"-->
+        <!--                android:paddingLeft="8dp"-->
+        <!--                android:paddingRight="8dp"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textColorHint="@android:color/darker_gray"-->
+        <!--                android:textSize="14sp" />-->
 
-        </LinearLayout>
+        <!--        </LinearLayout>-->
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -124,13 +124,12 @@
                 android:layout_below="@+id/tvJumbo2"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/md_orange_500"
                 android:hint="@string/mulai"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                app:cornerRadius="8dp"
-                android:backgroundTint="@color/md_orange_500"
-                />
+                app:cornerRadius="8dp" />
 
             <ImageView
                 android:id="@+id/ImgJumbotron"

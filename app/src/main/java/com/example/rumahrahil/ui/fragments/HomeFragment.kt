@@ -1,5 +1,6 @@
 package com.example.rumahrahil.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.rumahrahil.databinding.FragmentHomeBinding
+import com.example.rumahrahil.ui.tes.TesKategoriActivity
 import com.example.rumahrahil.utils.Constants
 import com.example.rumahrahil.utils.MySharedPreferences
 
@@ -16,6 +18,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var homeBinding: FragmentHomeBinding
     private lateinit var mySharedPreferences: MySharedPreferences
+    private lateinit var studentId: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +36,7 @@ class HomeFragment : Fragment() {
 
         val name = mySharedPreferences.getValue(Constants.SISWA_NAMA).toString()
         val photo = mySharedPreferences.getValue(Constants.SISWA_IMAGE).toString()
+        studentId = mySharedPreferences.getValue(Constants.SISWA_ID)!!
 
         homeBinding.tvStudentName.text = name
 
@@ -41,6 +45,9 @@ class HomeFragment : Fragment() {
             .apply(RequestOptions().override(100, 100))
             .into(homeBinding.imgStudent)
 
+        homeBinding.buttonMulai.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), TesKategoriActivity::class.java))
+        }
 
     }
 }

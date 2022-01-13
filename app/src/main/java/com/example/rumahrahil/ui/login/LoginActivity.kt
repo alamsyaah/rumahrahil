@@ -11,6 +11,7 @@ import com.example.rumahrahil.retrofit.responses.LoginResponse
 import com.example.rumahrahil.ui.MainActivity
 import com.example.rumahrahil.utils.Constants
 import com.example.rumahrahil.utils.MySharedPreferences
+import es.dmoral.toasty.Toasty
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -110,14 +111,18 @@ class LoginActivity : AppCompatActivity() {
                                 Constants.TOKEN,
                                 response.body()!!.data!!.token!!
                             )
-                            Toast.makeText(this@LoginActivity, "Berhasil login", Toast.LENGTH_SHORT)
+                            Toasty.success(
+                                this@LoginActivity,
+                                "Anda Berhasil login",
+                                Toast.LENGTH_SHORT
+                            )
                                 .show()
                             startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                             finish()
                         }
 
                         404 -> {
-                            Toast.makeText(
+                            Toasty.error(
                                 this@LoginActivity,
                                 "Maaf Username/Password yang Anda Masukkan Salah",
                                 Toast.LENGTH_SHORT

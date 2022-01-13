@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
         ExpandableBottomBarNavigationUI.setupWithNavController(expandable_bottom_bar, navController)
+
     }
 
 }

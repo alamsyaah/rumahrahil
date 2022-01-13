@@ -2,6 +2,10 @@ package com.example.rumahrahil.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.lang.reflect.Type
+import java.util.*
 
 class MySharedPreferences(mContext: Context) {
 
@@ -29,6 +33,21 @@ class MySharedPreferences(mContext: Context) {
 
     fun getValueInteger(key: String): Int? {
         return mSharedPreferences.getInt(key, 0)
+    }
+
+    fun saveArrayList(key: String, list: ArrayList<String?>?) {
+        val editor: SharedPreferences.Editor = mSharedPreferences.edit()
+        val gson = Gson()
+        val json: String = gson.toJson(list)
+        editor.putString(key, json)
+        editor.apply()
+    }
+
+    fun getArrayList(key: String?): ArrayList<String?>? {
+        val gson = Gson()
+        val json: String? = mSharedPreferences.getString(key, null)
+        val type: Type = object : TypeToken<ArrayList<String?>?>() {}.type
+        return gson.fromJson(json, type)
     }
 
 }
