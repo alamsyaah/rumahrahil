@@ -67,6 +67,8 @@ class ProfileFragment : Fragment() {
                     mySharedPreferences.setValue(Constants.SISWA_ALAMAT, "")
                     mySharedPreferences.setValue(Constants.SISWA_EMAIL, "")
                     mySharedPreferences.setValue(Constants.TOKEN, "")
+                    mySharedPreferences.setValue(Constants.MAPEL_ID, "")
+                    mySharedPreferences.setValue(Constants.BAB_ID, "")
 
                     startActivity(Intent(context, LoginActivity::class.java))
                     activity?.finish()
