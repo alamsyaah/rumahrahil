@@ -5,7 +5,6 @@ import android.content.SharedPreferences
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
-import java.util.*
 
 class MySharedPreferences(mContext: Context) {
 
@@ -35,7 +34,7 @@ class MySharedPreferences(mContext: Context) {
         return mSharedPreferences.getInt(key, 0)
     }
 
-    fun saveArrayList(key: String, list: ArrayList<String?>?) {
+    fun saveArrayList(key: String, list: String) {
         val editor: SharedPreferences.Editor = mSharedPreferences.edit()
         val gson = Gson()
         val json: String = gson.toJson(list)

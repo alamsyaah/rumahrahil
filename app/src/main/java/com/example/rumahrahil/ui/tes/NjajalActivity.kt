@@ -17,7 +17,7 @@ class NjajalActivity : AppCompatActivity() {
         setContentView(mNjajalBinding.root)
 
         mySharedPreferences = MySharedPreferences(this)
-        mNjajalBinding.tvMapel.text = mySharedPreferences.getValue(Constants.MAPEL_ID)
+        mNjajalBinding.tvMapel.text = intent.getStringExtra(Constants.MAPEL_ID)
 
     }
 }

@@ -38,6 +38,25 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
+
+        mLoginBinding.btnFacebookLogin.setOnClickListener {
+            Toasty.info(
+                this,
+                "Mohon maaf fitur ini masih dalam tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        mLoginBinding.btnGoogleLogin.setOnClickListener {
+            Toasty.info(this, "Maaf fitur ini masih dalam tahap pengembangan", Toast.LENGTH_SHORT)
+                .show()
+        }
+
+        mLoginBinding.tvGotosignupLogin.setOnClickListener {
+            Toasty.info(this, "Maaf fitur ini masih dalam tahap pengembangan", Toast.LENGTH_SHORT)
+                .show()
+        }
+
         mLoginBinding.btnSubmitLogin.setOnClickListener {
             if (validate()) {
                 val mUsername = mLoginBinding.etUsername.text.toString()

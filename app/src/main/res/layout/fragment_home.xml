@@ -27,6 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/halo"
+                    android:fontFamily="@font/poppins_medium"
                     android:textSize="16sp" />
 
                 <TextView
@@ -35,6 +36,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/username"
                     android:textSize="24sp"
+                    android:fontFamily="@font/poppins_medium"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -99,10 +101,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_medium"
                 android:text="@string/tes_online"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvJumbo2"
@@ -113,6 +116,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="80dp"
                 android:text="@string/sekarang_yuk"
+                android:fontFamily="@font/poppins_medium"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
@@ -155,157 +159,173 @@
                 android:layout_height="wrap_content"
                 android:text="@string/kelas_terakhir"
                 android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <LinearLayout
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/home_class_box"
-                android:backgroundTint="#F5FAF5"
-                android:orientation="horizontal">
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_horizontal"
+                android:padding="24dp"
+                android:text="Riwayat kelas belum tersedia"
+                android:textSize="18sp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/book_icon"
-                    android:padding="8dp"
-                    android:src="@drawable/home_book_one" />
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:background="@drawable/home_class_box"-->
+            <!--                android:backgroundTint="#F5FAF5"-->
+            <!--                android:orientation="horizontal">-->
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+            <!--                <ImageView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:contentDescription="@string/book_icon"-->
+            <!--                    android:padding="8dp"-->
+            <!--                    android:src="@drawable/home_book_one" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/matematika_dasar"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/waktu_45_menit"
-                        android:textColor="@color/black" />
+            <!--                    <TextView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="8dp"-->
+            <!--                        android:layout_marginBottom="8dp"-->
+            <!--                        android:text="@string/matematika_dasar"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        android:fontFamily="@font/poppins_medium"/>-->
 
-                </LinearLayout>
+            <!--                    <TextView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="8dp"-->
+            <!--                        android:text="@string/waktu_45_menit"-->
+            <!--                        android:fontFamily="@font/poppins_medium"-->
+            <!--                        android:textColor="@color/black" />-->
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/home_play_icon"
-                    android:contentDescription="@string/play" />
+            <!--                </LinearLayout>-->
 
-            </LinearLayout>
+            <!--                <ImageButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_margin="8dp"-->
+            <!--                    android:background="@drawable/home_play_icon"-->
+            <!--                    android:contentDescription="@string/play" />-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/home_class_box"
-                android:orientation="horizontal">
+            <!--            </LinearLayout>-->
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/book_icon"
-                    android:padding="8dp"
-                    android:src="@drawable/home_book_two" />
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:background="@drawable/home_class_box"-->
+            <!--                android:orientation="horizontal">-->
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+            <!--                <ImageView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:contentDescription="@string/book_icon"-->
+            <!--                    android:padding="8dp"-->
+            <!--                    android:src="@drawable/home_book_two" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/matematika_dasar"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/waktu_45_menit"
-                        android:textColor="@color/black" />
+            <!--                    <TextView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="8dp"-->
+            <!--                        android:layout_marginBottom="8dp"-->
+            <!--                        android:text="@string/matematika_dasar"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        android:fontFamily="@font/poppins_medium"/>-->
 
-                </LinearLayout>
+            <!--                    <TextView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="8dp"-->
+            <!--                        android:text="@string/waktu_45_menit"-->
+            <!--                        android:fontFamily="@font/poppins_medium"-->
+            <!--                        android:textColor="@color/black" />-->
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/home_play_icon"
-                    android:contentDescription="@string/play" />
+            <!--                </LinearLayout>-->
 
-            </LinearLayout>
+            <!--                <ImageButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_margin="8dp"-->
+            <!--                    android:background="@drawable/home_play_icon"-->
+            <!--                    android:contentDescription="@string/play" />-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/home_class_box"
-                android:backgroundTint="#F2F8FC"
-                android:orientation="horizontal">
+            <!--            </LinearLayout>-->
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/book_icon"
-                    android:padding="8dp"
-                    android:src="@drawable/home_book_three" />
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:background="@drawable/home_class_box"-->
+            <!--                android:backgroundTint="#F2F8FC"-->
+            <!--                android:orientation="horizontal">-->
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+            <!--                <ImageView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:contentDescription="@string/book_icon"-->
+            <!--                    android:padding="8dp"-->
+            <!--                    android:src="@drawable/home_book_three" />-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/matematika_dasar"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/waktu_45_menit"
-                        android:textColor="@color/black" />
+            <!--                    <TextView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="8dp"-->
+            <!--                        android:layout_marginBottom="8dp"-->
+            <!--                        android:text="@string/matematika_dasar"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        android:fontFamily="@font/poppins_medium"/>-->
 
-                </LinearLayout>
+            <!--                    <TextView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="8dp"-->
+            <!--                        android:text="@string/waktu_45_menit"-->
+            <!--                        android:fontFamily="@font/poppins_medium"-->
+            <!--                        android:textColor="@color/black" />-->
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/home_play_icon"
-                    android:contentDescription="@string/play" />
+            <!--                </LinearLayout>-->
 
-            </LinearLayout>
+            <!--                <ImageButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_margin="8dp"-->
+            <!--                    android:background="@drawable/home_play_icon"-->
+            <!--                    android:contentDescription="@string/play" />-->
+
+            <!--            </LinearLayout>-->
 
         </LinearLayout>
 
@@ -321,6 +341,7 @@
                 android:text="@string/ikut_bimbingan_belajar"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:fontFamily="@font/poppins_medium"
                 android:textStyle="bold" />
 
             <ImageView
@@ -336,16 +357,19 @@
                 android:text="@string/rumah_rahil"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:fontFamily="@font/poppins_medium"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_medium"
                 android:text="@string/deskripsi_rahil"
                 android:textColor="@color/black" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sign_up"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"

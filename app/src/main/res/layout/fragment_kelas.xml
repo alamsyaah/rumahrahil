@@ -1,14 +1,427 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="16dp"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context=".ui.fragments.KelasFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/halo"
+            android:textColor="#0048A4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingHorizontal="8dp"
+            android:text="@string/username"
+            android:textColor="#0048A4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_greeting"
+            app:layout_constraintStart_toEndOf="@id/tv_greeting"
+            app:layout_constraintTop_toTopOf="@id/tv_greeting" />
+
+        <ImageView
+            android:id="@+id/img_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_profile"
+            android:contentDescription="@string/profil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_username" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:text="Sudah siap belajar hari ini ?"
+            android:textColor="#333333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_greeting" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_your_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingVertical="16dp"
+            android:text="Kelas Anda"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_ask" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_first_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="("
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_your_class"
+            app:layout_constraintStart_toEndOf="@id/tv_your_class"
+            app:layout_constraintTop_toTopOf="@id/tv_your_class" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_second_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text=")"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_value_your_class"
+            app:layout_constraintStart_toEndOf="@id/tv_value_your_class"
+            app:layout_constraintTop_toTopOf="@id/tv_value_your_class" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_value_your_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="0"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_first_char"
+            app:layout_constraintStart_toEndOf="@id/tv_first_char"
+            app:layout_constraintTop_toTopOf="@id/tv_first_char" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_first_view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Lihat semua"
+            android:textColor="#333333"
+            app:layout_constraintBottom_toBottomOf="@id/tv_second_char"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_second_char" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/first_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/second_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fifth_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/first_apologize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:paddingVertical="16dp"
+            android:text="Kelas Pembelajaran Belum Tersedia"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_your_class" />
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/first_cardview"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="90dp"-->
+        <!--            android:elevation="4dp"-->
+        <!--            android:clickable="true"-->
+        <!--            android:focusable="true"-->
+        <!--            app:cardBackgroundColor="#0048A4"-->
+        <!--            app:cardCornerRadius="15dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/first_guideline"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_your_class">-->
+
+        <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent">-->
+
+        <!--                <com.google.android.material.textview.MaterialTextView-->
+        <!--                    android:id="@+id/tv_first_mapel"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Bahasa Inggris"-->
+        <!--                    android:padding="8dp"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:fontFamily="@font/poppins_medium"-->
+        <!--                    app:layout_constraintTop_toTopOf="parent"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+        <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/second_cardview"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="90dp"-->
+        <!--            app:cardBackgroundColor="#0048A4"-->
+        <!--            android:elevation="4dp"-->
+        <!--            app:cardCornerRadius="15dp"-->
+        <!--            android:clickable="true"-->
+        <!--            android:focusable="true"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/second_guideline"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/first_guideline"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/first_cardview"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/first_cardview"-->
+        <!--            android:layout_marginHorizontal="8dp">-->
+
+        <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent">-->
+
+        <!--                <com.google.android.material.textview.MaterialTextView-->
+        <!--                    android:id="@+id/tv_second_mapel"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Bahasa Inggris"-->
+        <!--                    android:padding="8dp"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:fontFamily="@font/poppins_medium"-->
+        <!--                    app:layout_constraintTop_toTopOf="parent"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+        <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_your_duty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingVertical="16dp"
+            android:text="Tugas"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_apologize" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_third_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="("
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_your_duty"
+            app:layout_constraintStart_toEndOf="@id/tv_your_duty"
+            app:layout_constraintTop_toTopOf="@id/tv_your_duty" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_fourth_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text=")"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_value_your_duty"
+            app:layout_constraintStart_toEndOf="@id/tv_value_your_duty"
+            app:layout_constraintTop_toTopOf="@id/tv_value_your_duty" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_value_your_duty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="0"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_third_char"
+            app:layout_constraintStart_toEndOf="@id/tv_third_char"
+            app:layout_constraintTop_toTopOf="@id/tv_third_char" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_second_view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Lihat semua"
+            android:textColor="#333333"
+            app:layout_constraintBottom_toBottomOf="@id/tv_fourth_char"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_fourth_char" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/second_apologize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:paddingVertical="16dp"
+            android:text="Tugas Pembelajaran Belum Tersedia"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_your_duty" />
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/third_cardview"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="200dp"-->
+        <!--            app:cardBackgroundColor="#F5F6FC"-->
+        <!--            android:clickable="true"-->
+        <!--            android:focusable="true"-->
+        <!--            android:elevation="4dp"-->
+        <!--            app:cardCornerRadius="15dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:layout_marginBottom="16dp"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_your_duty"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/fifth_guideline">-->
+
+        <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent">-->
+
+        <!--                <com.google.android.material.textview.MaterialTextView-->
+        <!--                    android:id="@+id/tv_day"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="1 Hari tersisa"-->
+        <!--                    android:padding="8dp"-->
+        <!--                    android:textSize="12sp"-->
+        <!--                    android:textColor="#599556"-->
+        <!--                    android:fontFamily="@font/poppins_medium"-->
+        <!--                    app:layout_constraintTop_toTopOf="parent"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+        <!--                <com.google.android.material.textview.MaterialTextView-->
+        <!--                    android:id="@+id/tv_third_mapel"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Bahasa Indonesia"-->
+        <!--                    android:textStyle="bold"-->
+        <!--                    android:padding="8dp"-->
+        <!--                    android:textSize="18sp"-->
+        <!--                    android:textColor="#333333"-->
+        <!--                    android:fontFamily="@font/poppins_medium"-->
+        <!--                    app:layout_constraintTop_toBottomOf="@id/tv_day"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+        <!--                <com.google.android.material.textview.MaterialTextView-->
+        <!--                    android:id="@+id/tv_first_explanation"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Membuat makalah tentang tummbuhan yang ada di alam"-->
+        <!--                    android:maxLines="3"-->
+        <!--                    android:padding="8dp"-->
+        <!--                    android:textColor="#333333"-->
+        <!--                    android:fontFamily="@font/poppins_medium"-->
+        <!--                    app:layout_constraintTop_toBottomOf="@id/tv_third_mapel"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+        <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/fourth_cardview"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="200dp"-->
+        <!--            app:cardBackgroundColor="#F5F6FC"-->
+        <!--            android:elevation="4dp"-->
+        <!--            android:clickable="true"-->
+        <!--            android:focusable="true"-->
+        <!--            app:cardCornerRadius="15dp"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/third_cardview"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/third_cardview"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/fifth_guideline"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent">-->
+
+        <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent">-->
+
+        <!--                <com.google.android.material.textview.MaterialTextView-->
+        <!--                    android:id="@+id/tv_first_day"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="1 Hari tersisa"-->
+        <!--                    android:padding="8dp"-->
+        <!--                    android:textSize="12sp"-->
+        <!--                    android:textColor="#599556"-->
+        <!--                    android:fontFamily="@font/poppins_medium"-->
+        <!--                    app:layout_constraintTop_toTopOf="parent"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+        <!--                <com.google.android.material.textview.MaterialTextView-->
+        <!--                    android:id="@+id/tv_fourth_mapel"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Bahasa Indonesia"-->
+        <!--                    android:textStyle="bold"-->
+        <!--                    android:padding="8dp"-->
+        <!--                    android:textSize="18sp"-->
+        <!--                    android:textColor="#333333"-->
+        <!--                    android:fontFamily="@font/poppins_medium"-->
+        <!--                    app:layout_constraintTop_toBottomOf="@id/tv_first_day"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+        <!--                <com.google.android.material.textview.MaterialTextView-->
+        <!--                    android:id="@+id/tv_second_explanation"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Membuat makalah tentang tummbuhan yang ada di alam"-->
+        <!--                    android:maxLines="3"-->
+        <!--                    android:padding="8dp"-->
+        <!--                    android:textColor="#333333"-->
+        <!--                    android:fontFamily="@font/poppins_medium"-->
+        <!--                    app:layout_constraintTop_toBottomOf="@id/tv_fourth_mapel"-->
+        <!--                    app:layout_constraintStart_toStartOf="parent"-->
+        <!--                    app:layout_constraintEnd_toEndOf="parent"/>-->
+
+        <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/second_apologize" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

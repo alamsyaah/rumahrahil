@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -15,6 +16,7 @@ import com.example.rumahrahil.ui.login.LoginActivity
 import com.example.rumahrahil.utils.Constants
 import com.example.rumahrahil.utils.MySharedPreferences
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
+import es.dmoral.toasty.Toasty
 
 class ProfileFragment : Fragment() {
 
@@ -45,7 +47,7 @@ class ProfileFragment : Fragment() {
                 .into(imgStudent)
         }
 
-        mProfileFragmentBinding.btnLogout.setOnClickListener {
+        mProfileFragmentBinding.tvLogout.setOnClickListener {
             val mDialog = MaterialDialog.Builder(requireActivity() as Activity)
                 .setTitle("Logout")
                 .setMessage(getString(R.string.confirm_logout))
@@ -56,7 +58,7 @@ class ProfileFragment : Fragment() {
                     dialogInterface.dismiss()
                 }
                 .setNegativeButton(
-                    getString(R.string.yes), R.drawable.logout_icon
+                    getString(R.string.logout), R.drawable.ic_exit
                 ) { dialogInterface, _ ->
                     mySharedPreferences.setValue(Constants.SISWA, "")
                     mySharedPreferences.setValue(Constants.SISWA_ID, "")
@@ -69,6 +71,8 @@ class ProfileFragment : Fragment() {
                     mySharedPreferences.setValue(Constants.TOKEN, "")
                     mySharedPreferences.setValue(Constants.MAPEL_ID, "")
                     mySharedPreferences.setValue(Constants.BAB_ID, "")
+                    mySharedPreferences.setValue(Constants.SISWA_KELAS, "")
+                    mySharedPreferences.setValue(Constants.PAKET_ID, "")
 
                     startActivity(Intent(context, LoginActivity::class.java))
                     activity?.finish()
@@ -77,6 +81,30 @@ class ProfileFragment : Fragment() {
                 .build()
             // Show Dialog
             mDialog.show()
+        }
+
+        mProfileFragmentBinding.layoutMyScore.setOnClickListener {
+            Toasty.info(
+                this.requireActivity(),
+                "Mohon maaf fitur ini masih dalam tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        mProfileFragmentBinding.layoutFavorite.setOnClickListener {
+            Toasty.info(
+                this.requireActivity(),
+                "Mohon maaf fitur ini masih dalam tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        mProfileFragmentBinding.layoutSettings.setOnClickListener {
+            Toasty.info(
+                this.requireActivity(),
+                "Mohon maaf fitur ini masih dalam tahap pengembangan",
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
     }
