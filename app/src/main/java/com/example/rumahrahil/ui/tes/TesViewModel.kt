@@ -9,6 +9,7 @@ import com.example.rumahrahil.retrofit.RetrofitClient
 import com.example.rumahrahil.retrofit.responses.BabResponse
 import com.example.rumahrahil.retrofit.responses.ClassResponse
 import com.example.rumahrahil.retrofit.responses.MapelResponse
+import com.example.rumahrahil.retrofit.responses.PaketResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -22,6 +23,9 @@ class TesViewModel : ViewModel() {
 
     private val _mMapel = MutableLiveData<ArrayList<MapelEntity>>()
     val mMapel: LiveData<ArrayList<MapelEntity>> = _mMapel
+
+    private val _mPaket = MutableLiveData<ArrayList<PaketEntity>>()
+    val mPaket: LiveData<ArrayList<PaketEntity>> = _mPaket
 
     companion object {
         private const val TAG = "TesViewModel"
@@ -86,6 +90,26 @@ class TesViewModel : ViewModel() {
                 Log.e(TAG, "${t.message}")
             }
 
+        })
+    }
+
+    fun getPaket(id: String, tokenAuth: String) {
+        val service = RetrofitClient().apiRequest().create(DataService::class.java)
+        service.getPaket(id, "Bearer $tokenAuth").enqueue(object : Callback<PaketResponse> {
+            override fun onResponse(call: Call<PaketResponse>, response: Response<PaketResponse>) {
+                if (response.isSuccessful) {
+                    if (response.body()!!.status == 200) {
+                        Log.e(TAG, response.message())
+                        _mPaket.value = response.body()!!.data
+                    }
+                } else {
+                    Log.e(TAG, response.message())
+                }
+            }
+
+            override fun onFailure(call: Call<PaketResponse>, t: Throwable) {
+                Log.e(TAG, "${t.message}")
+            }
         })
     }
 }

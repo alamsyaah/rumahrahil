@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.example.rumahrahil.databinding.FragmentTesBinding
 import com.example.rumahrahil.utils.Constants
 import com.example.rumahrahil.utils.MySharedPreferences
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.item_jenjang_tes.*
 
 
@@ -42,11 +43,16 @@ class TesFragment : Fragment() {
             cvSmpTes.visibility = View.GONE
             cvSmaTes.visibility = View.GONE
             cvKedinasanTes.visibility = View.GONE
+            firstView.visibility = View.GONE
+            secondView.visibility = View.GONE
+            thirdView.visibility = View.GONE
+            fourthView.visibility = View.GONE
         }
 
         if (jenjang == "1") {
             with(mTestBinding) {
                 cvSdTes.visibility = View.VISIBLE
+                firstView.visibility = View.VISIBLE
                 cvSdTes.setOnClickListener {
                     startActivity(
                         Intent(
@@ -59,6 +65,7 @@ class TesFragment : Fragment() {
         } else if (jenjang == "2") {
             with(mTestBinding) {
                 cvSmpTes.visibility = View.VISIBLE
+                secondView.visibility = View.VISIBLE
                 cvSmpTes.setOnClickListener {
                     startActivity(
                         Intent(
@@ -71,6 +78,7 @@ class TesFragment : Fragment() {
         } else if (jenjang == "3") {
             with(mTestBinding) {
                 cvSmaTes.visibility = View.VISIBLE
+                thirdView.visibility = View.VISIBLE
                 cvSmaTes.setOnClickListener {
                     startActivity(
                         Intent(
@@ -83,6 +91,7 @@ class TesFragment : Fragment() {
         } else if (jenjang == "4") {
             with(mTestBinding) {
                 cvKedinasanTes.visibility = View.VISIBLE
+                fourthView.visibility = View.VISIBLE
                 cvKedinasanTes.setOnClickListener {
                     startActivity(
                         Intent(
@@ -93,7 +102,7 @@ class TesFragment : Fragment() {
                 }
             }
         } else {
-            Toast.makeText(
+            Toasty.error(
                 this.requireActivity(),
                 "Maaf Jenjang Tidak Ditemukan",
                 Toast.LENGTH_SHORT

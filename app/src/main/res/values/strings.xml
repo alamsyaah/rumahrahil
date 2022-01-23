@@ -21,7 +21,7 @@
     <string name="welcome_back">Selamat datang!</string>
     <string name="description_welcome">Silahkan isi data berikut untuk masuk</string>
     <string name="email">Email</string>
-    <string name="password">Kata sandi</string>
+    <string name="password">Password</string>
     <string name="forgot_password">Lupa kata sandi?</string>
     <string name="or_connect_using">Atau dengan</string>
     <string name="facebook">Facebook</string>
@@ -87,6 +87,7 @@
     <string name="save_change">Save Change</string>
     <string name="no">Tidak</string>
     <string name="yes">Ya</string>
+    <string name="logout">Logout</string>
     <string name="confirm_logout">Apakah Anda Yakin Ingin Keluar?</string>
     <string name="first_number">1</string>
     <string name="from">dari</string>

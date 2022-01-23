@@ -31,6 +31,12 @@ interface DataService {
         @Header("Authorization") token: String
     ): Call<MapelResponse>
 
+    @GET("api/paket")
+    fun getPaket(
+        @Query("id_bab") id_bab: String,
+        @Header("Authorization") token: String
+    ): Call<PaketResponse>
+
     @GET("api/soal")
     fun getSoal(
         @Query("mapel_id") mapel_id: String,
