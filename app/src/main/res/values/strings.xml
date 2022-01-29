@@ -66,6 +66,8 @@
     <string name="pilih_jenjang">Pilih Jenjang</string>
     <string name="desc_tesonline">Tes Online merupakan salah satu fitur dimana siswa dapat mengukur sejauh mana kompetensi pribadi dari kumpulan soal yang telah disediakan.</string>
     <string name="mulai_ujian">Mulai Ujian?</string>
+    <string name="selesai_ujian">Selesai Ujian?</string>
+    <string name="message_dialog_finish">Jawaban anda akan kami rekap</string>
     <string name="message_dialog_teskategori">Kamu tidak akan bisa keluar sebelum menyelesaikan tes yang diberikan.</string>
     <string name="positive_dialog">Ya</string>
     <string name="negative_dialog">Tidak</string>

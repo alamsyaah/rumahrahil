@@ -20,9 +20,9 @@ class QuestionViewModel : ViewModel() {
         private const val TAG = "QuestionViewModel"
     }
 
-    fun getQuestion(mapel_id: String, paket_id: String, tokenAuth: String) {
+    fun getQuestion(paket_id: String, tokenAuth: String) {
         val service = RetrofitClient().apiRequest().create(DataService::class.java)
-        service.getSoal(mapel_id, paket_id, "Bearer $tokenAuth")
+        service.getSoal(paket_id, "Bearer $tokenAuth")
             .enqueue(object : Callback<QuestionResponse> {
                 override fun onResponse(
                     call: Call<QuestionResponse>,

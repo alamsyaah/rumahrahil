@@ -39,7 +39,6 @@ interface DataService {
 
     @GET("api/soal")
     fun getSoal(
-        @Query("mapel_id") mapel_id: String,
         @Query("paket_id") paket_id: String,
         @Header("Authorization") token: String
     ): Call<QuestionResponse>

@@ -73,6 +73,7 @@ class ProfileFragment : Fragment() {
                     mySharedPreferences.setValue(Constants.BAB_ID, "")
                     mySharedPreferences.setValue(Constants.SISWA_KELAS, "")
                     mySharedPreferences.setValue(Constants.PAKET_ID, "")
+                    mySharedPreferences.setValue(Constants.PAKET_TIME, "")
 
                     startActivity(Intent(context, LoginActivity::class.java))
                     activity?.finish()

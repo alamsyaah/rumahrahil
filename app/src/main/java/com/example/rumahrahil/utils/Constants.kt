@@ -23,6 +23,7 @@ object Constants {
     const val optionE = "optionE"
     const val ARRAY_BAB = ""
     const val PAKET_ID = ""
+    const val PAKET_TIME = ""
     const val correctAnswer = "correctAnswer"
     const val failureAnswer = "failureAnswer"
 }

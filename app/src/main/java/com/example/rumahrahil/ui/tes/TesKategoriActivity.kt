@@ -22,11 +22,16 @@ class TesKategoriActivity : AppCompatActivity() {
     private var mapMapel: MutableMap<String, String> = mutableMapOf()
     private var mapBab: MutableMap<String, String> = mutableMapOf()
     private var mapPaket: MutableMap<String, String> = mutableMapOf()
+    private var mapWaktuPaket: MutableMap<String, String> = mutableMapOf()
     private var listClassName = ArrayList<String>()
     private var listJurusan = ArrayList<String>()
     private var BabName = ArrayList<String>()
     private var mapelName = ArrayList<String>()
     private var PaketName = ArrayList<String>()
+    private var savedIdMapel: String = ""
+    private var savedIdBab: String = ""
+    private var savedIdPaket: String = ""
+    private var savedTimePaket: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,7 +60,12 @@ class TesKategoriActivity : AppCompatActivity() {
                 ) { dialogInterface, _ ->
 
                     if (validate()) {
-                        startActivity(Intent(this, FirstTesActivity::class.java))
+                        val intent = Intent(this, FirstTesActivity::class.java).apply {
+                            putExtra(Constants.PAKET_ID, savedIdPaket)
+//                            putExtra(Constants.PAKET_TIME, savedTimePaket)
+                        }
+
+                        startActivity(intent)
                     }
                     dialogInterface.dismiss()
                 }
@@ -63,8 +73,6 @@ class TesKategoriActivity : AppCompatActivity() {
             mDialog.show()
 
         }
-
-
 
         mySharedPreferences = MySharedPreferences(this)
         studentId = mySharedPreferences.getValue(Constants.SISWA_ID)!!
@@ -82,8 +90,6 @@ class TesKategoriActivity : AppCompatActivity() {
 
         getClass(idKelas, tokenAuth)
         getMapel(idKelas, tokenAuth)
-
-
     }
 
     private fun getClass(id_kelas: String, tokenAuth: String) {
@@ -101,7 +107,6 @@ class TesKategoriActivity : AppCompatActivity() {
                 mySharedPreferences.setValue(Constants.SISWA_KELAS, listClassName.toString())
 
                 getGrade()
-
             }
         })
 
@@ -143,31 +148,33 @@ class TesKategoriActivity : AppCompatActivity() {
                         val getPositionMapel = parent?.getItemAtPosition(position)
 
                         for ((key, value) in mapMapel) {
-                            if (getPositionMapel!!.equals(key)) {
-                                val idSavedMapel = value
-                                Log.d("tes", "tes mapel : $idSavedMapel")
-                                mySharedPreferences.setValue(Constants.MAPEL_ID, idSavedMapel)
+                            if (getPositionMapel!! == key) {
+                                savedIdMapel = value
+                                Log.d("tes", "tes mapel : $savedIdMapel")
+                                mySharedPreferences.setValue(Constants.MAPEL_ID, savedIdMapel)
 
-                                val idMapel =
-                                    mySharedPreferences.getValue(Constants.MAPEL_ID).toString()
+//                                val idMapel =
+//                                    mySharedPreferences.getValue(Constants.MAPEL_ID).toString()
                                 val tokenAuth =
                                     mySharedPreferences.getValue(Constants.TOKEN).toString()
 
-                                if (idMapel != "") {
-                                    getBab(idMapel, tokenAuth)
+                                if (savedIdMapel != "") {
+                                    getBab(savedIdMapel, tokenAuth)
 
                                 } else {
                                     getBab(null.toString(), null.toString())
                                 }
                             }
                         }
-                        adapterMapel.notifyDataSetChanged()
                     }
             }
         })
     }
 
     private fun getBab(id_mapel: String, tokenAuth: String) {
+
+        mTestCategoryBinding.ddBabTes.text.clear()
+        mTestCategoryBinding.ddPaketTes.text.clear()
 
         tesViewModel.getBab(id_mapel, tokenAuth)
         tesViewModel.mBab.observe(this, { mBab ->
@@ -180,11 +187,6 @@ class TesKategoriActivity : AppCompatActivity() {
                     mapBab.put(it.nama_bab, it.id_bab)
                 }
 
-//                mySharedPreferences.saveArrayList(Constants.ARRAY_BAB, BabName)
-//
-//                val getArrayBab = mySharedPreferences.getArrayList(Constants.ARRAY_BAB)
-
-
                 val adapterBab = ArrayAdapter(
                     this,
                     android.R.layout.simple_spinner_dropdown_item,
@@ -196,21 +198,19 @@ class TesKategoriActivity : AppCompatActivity() {
                     AdapterView.OnItemClickListener { parent, view, position, id ->
                         val getPositionBab = parent?.getItemAtPosition(position)
                         for ((key, value) in mapBab) {
-                            if (getPositionBab!!.equals(key)) {
-                                val idSavedBab = value
-                                Log.d("tes", "tes bab : $idSavedBab")
-                                mySharedPreferences.setValue(Constants.BAB_ID, idSavedBab)
+                            if (getPositionBab!! == key) {
+                                savedIdBab = value
+                                Log.d("tes", "tes bab : $savedIdBab")
+//                                mySharedPreferences.setValue(Constants.BAB_ID, savedIdBab)
 
-                                mySharedPreferences.setValue(Constants.PAKET_ID, idSavedBab)
 
-                                val idBab =
-                                    mySharedPreferences.getValue(Constants.BAB_ID).toString()
+//                                val idBab =
+//                                    mySharedPreferences.getValue(Constants.BAB_ID).toString()
                                 val tokenAuth =
                                     mySharedPreferences.getValue(Constants.TOKEN).toString()
 
-                                if (idBab != "") {
-                                    getPaket(idBab, tokenAuth)
-
+                                if (savedIdBab != "") {
+                                    getPaket(savedIdBab, tokenAuth)
                                 } else {
                                     getPaket(null.toString(), null.toString())
                                 }
@@ -218,14 +218,15 @@ class TesKategoriActivity : AppCompatActivity() {
                             }
                         }
                     }
-                adapterBab.notifyDataSetChanged()
             }
         })
     }
 
     private fun getPaket(id_bab: String, tokenAuth: String) {
+
+        mTestCategoryBinding.ddPaketTes.text.clear()
         tesViewModel.getPaket(id_bab, tokenAuth)
-        tesViewModel.mPaket.observe(this, { mPaket ->
+        tesViewModel.mPaket.observe(this) { mPaket ->
 
             if (mPaket != null) {
                 PaketName.clear()
@@ -233,6 +234,7 @@ class TesKategoriActivity : AppCompatActivity() {
                 mPaket.forEach {
                     PaketName.add(it.nama_paket)
                     mapPaket.put(it.nama_paket, it.id_paket)
+                    mapWaktuPaket.put(it.nama_paket, it.waktu)
                 }
 
                 val adapterPaket =
@@ -244,19 +246,30 @@ class TesKategoriActivity : AppCompatActivity() {
                         val getPositionPaket = parent?.getItemAtPosition(position)
 
                         for ((key, value) in mapPaket) {
-                            if (getPositionPaket!!.equals(key)) {
-                                val idSavedPaket = value
-                                Log.d("tes", "tes paket : $idSavedPaket")
-                                mySharedPreferences.setValue(Constants.PAKET_ID, idSavedPaket)
+                            if (getPositionPaket!! == key) {
+                                savedIdPaket = value
+
+                                Log.d("tes", "tes paket : $savedIdPaket")
+
+                                mySharedPreferences.setValue(Constants.PAKET_ID, savedIdPaket)
                             }
                         }
+
+
+//                        for ((key, value) in mapWaktuPaket) {
+//                            if (getPositionPaket!! == key) {
+//                                savedTimePaket = value
+//                                Log.d("tes", "tes waktu paket : $savedTimePaket")
+////                                mySharedPreferences.setValue(Constants.PAKET_TIME, timeSavedPaket)
+//                            }
+//                        }
                     }
 
-                adapterPaket.notifyDataSetChanged()
             }
 
-        })
+        }
     }
+
 
     private fun validate(): Boolean {
         if (mTestCategoryBinding.ddTemaTes.text.toString() == "") {
